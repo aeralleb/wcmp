@@ -1,4 +1,4 @@
-#WeChat Miniprograms
+**WeChat Miniprograms**
 
 
 1. Download, Install and Setup the WeChat IDE
