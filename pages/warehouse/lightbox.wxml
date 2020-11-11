@@ -1,0 +1,12 @@
+<!--pages/warehouse/lightbox.wxml-->
+<view class="container">
+  <view class="warehouse-lightbox">
+    <image class="warehouse-logo" src="https://images.contentstack.io/v3/assets/blt5a5988820e5f83f8/bltf65c16d396a81b4a/5f1897ac4111513a72487ec7/Warehouse_SiteLogo_White_Mobile_2x.png"></image>
+    <h3> UP TO 75% OFF CLOSEOUT STYLES  </h3>
+    <p>Sign up below, so whenever there’s a promotion, special offer or new arrival, you’ll hear about it first.</p>
+    <input type="text" placeholder="Email" id=""></input>
+    <p class="smaller-font"><text style="text-decoration:underline">Privacy Policy</text> : By Submitting my email address, I agree to receive personalized emails from LS&Co. Group of Companies regarding exclusive offers, new arrivals, event and contest invites and more as explained in the LS&Co. . Offer details, financial incentives and exclusions available. I can unsubscribe at any time.</p>
+    <button type="secondary" bindtap="continueToPDP">Continue</button>
+    <label>Go Back</label>
+  </view>
+</view>

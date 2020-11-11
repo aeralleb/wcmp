@@ -1,5 +1,7 @@
 {
   "pages":[
+    "pages/warehouse/sale",
+    "pages/warehouse/lightbox",
     "pages/index/index",
     "pages/logs/logs"
   ],

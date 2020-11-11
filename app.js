@@ -2,11 +2,13 @@
 import qs from 'qs'
 App({
   onLaunch() {
+    console.log("---------app.js on:Launch---------------")
+
+     /*
     const string = qs.stringify({
         a: 1,
         b: 2
     })
-    console.log("---------app.js on:Launch---------------")
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -34,6 +36,7 @@ App({
     })
     */
     // 获取用户信息
+    /*
     wx.getSetting({
       success: res => {
         console.log("------------app.js getSetting() success-----------", res)
@@ -57,7 +60,8 @@ App({
           })
         }
       }
-    })
+    }) 
+    */
   },
   globalData: {
   }

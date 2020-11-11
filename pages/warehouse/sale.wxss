@@ -1,0 +1,56 @@
+/* pages/warehouse/sale.wxss */
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Helvetica-Now-Text-Bold, Helvetica,Arial, sans-serif; 
+}
+.warehouse-sale{
+  background-color: black;
+  max-width: 100%;
+  padding: 20px;
+}
+h4{
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+h3{
+  padding-top: 20px;
+  color: #c41e30;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: .04em;
+  font-size: calc(24px + 16*(100vw - 768px)/672);
+  line-height: calc(24px + 16*(100vw - 768px)/672);
+}
+p{
+  padding-top: 20px;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 24px;
+}
+span{
+  padding-top: 20px;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.small-font{
+  font-size:12px;
+}

@@ -1,0 +1,83 @@
+/* pages/warehouse/lightbox.wxss */
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Helvetica-Now-Text-Bold, Helvetica,Arial, sans-serif; 
+}
+.warehouse-logo{
+  width:256px;
+  height:21px;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.warehouse-lightbox{
+  background-color: black;
+  max-width: 80%;
+  padding: 20px;
+}
+h4{
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+h3{
+  padding-top: 20px;
+  color:red;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .04em;
+  font-size: calc(28px + 16*(100vw - 768px)/672);
+  margin-left:20px;
+  margin-right:20px;
+}
+p{
+  padding-top: 20px;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: lighter;
+  margin: 0 40px 0 60px;
+}
+span{
+  padding-top: 20px;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.smaller-font{
+  font-size:10px;
+}
+input{
+  border-bottom: 1px solid grey;
+  margin: 20px 40px 0 40px;
+  color: white;
+}
+button{
+  width: 300px;
+  margin-top: 20px;
+}
+label{
+  padding-top: 20px;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+  display: none;
+}
