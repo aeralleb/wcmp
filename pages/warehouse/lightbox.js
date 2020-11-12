@@ -1,4 +1,6 @@
 // pages/warehouse/lightbox.js
+const wxp = require('../../utils/wxp.js');
+const util = require('../../utils/util.js')
 Page({
 
   /**
@@ -12,7 +14,11 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    const CSWarehousePromoContent = wx.getStorageSync("CSWarehousePromoContent");
+    console.log("---------lightbox.js onLoad----------");
+    this.setData({
+      CSWarehousePromoContent : CSWarehousePromoContent
+    });
   },
 
   /**
@@ -62,5 +68,8 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  continueToPDP: function(){
+     console.log("---------------lightbox.js continueToPDP-----------------");
   }
 })

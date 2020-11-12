@@ -1,10 +1,10 @@
 <!--pages/warehouse/sale.wxml-->
 <view class="container">
   <view class="warehouse-sale">
-    <h4> LEVI'S® WAREHOUSE EVENT </h4>
-    <h3> UP TO 75% OFF </h3>
-    <p>Save big on our closeout styles.</p>
-    <span bindtap="shopTheSale">SHOP THE SALE</span>
-    <p class="small-font">Online only. Final sale.</p>
+    <h4> {{title}} </h4>
+    <h3> {{subTitle}} </h3>
+    <p>{{blurb}}</p>
+    <span bindtap="shopTheSale">{{link}}</span>
+    <p class="small-font">{{finePrint}}</p>
   </view>
 </view>
