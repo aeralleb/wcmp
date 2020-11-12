@@ -12,8 +12,6 @@ Page({
     hasUserInfo: false,
     canIUse: true,
     scanning: false,
-    heroImage: '',
-    showSize: "Please select a Size",
     scanMsg: "Scanning ...",
   },
   //事件处理函数
@@ -129,46 +127,6 @@ Page({
             this.getProduct(res.result)
         } 
       }
-    })
-  },
-
-  changeSizes: function(e){
-     var index= e.detail.value;
-     console.log("The subscript of index is:" + index);
-
-     var id=this.data.Tops[index].id;
-     var name =this.data.Tops[index].name;
-     
-     this.setData({
-       showSize:  name 
-     })
-
-  },
-  cancelDropdown: function(e){
-     console.log("trigger cancel event");
-  },
-
-  async getProduct(pdpURL){
-    //async await promise
-    const {data} = await wxp.request({
-      url: pdpURL,
-      data: {},
-      method: 'GET',
-      dataType: 'json',
-      header: {
-        'content-type':'application/json'
-      }
-    })
-    console.log("-------------getProduct using async await------------------", data);
-    const {products, ...rest} = data;
-    this.setData({
-      heroImage : products[0].images[1].url,
-      product: products[0],
-      materials: rest.facets[0].values,
-      waists: rest.facets[2].values,
-      lengths: rest.facets[3].values,
-      Tops: rest.facets[4].values,
-      scanMsg: "", 
     })
   }
 })

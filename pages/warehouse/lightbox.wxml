@@ -4,7 +4,7 @@
     <image class="warehouse-logo" src="{{CSWarehousePromoContent.logo}}"></image>
     <h3> {{CSWarehousePromoContent.saleTitle}}"  </h3>
     <p>{{CSWarehousePromoContent.signupBlurb}}"</p>
-    <input type="text" placeholder="Email" id=""></input>
+    <input type="text" placeholder="Email" bindinput="inputEvent"></input>
     <p class="smaller-font">{{CSWarehousePromoContent.privacyPolicy}}</p>
     <button type="secondary" bindtap="continueToPDP">Continue</button>
     <label>Go Back</label>

@@ -2,6 +2,8 @@
   "pages":[
     "pages/warehouse/sale",
     "pages/warehouse/lightbox",
+    "pages/product/list",
+    "pages/product/detail",
     "pages/index/index",
     "pages/logs/logs"
   ],

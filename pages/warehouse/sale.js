@@ -67,7 +67,7 @@ Page({
 
   },
   shopTheSale: function(){
-     console.log("---------------sale.js shopTheSale-----------");
+     console.log("---------------warehouse/sale.js shopTheSale-----------");
      wx.navigateTo({
       url: './lightbox'
     })

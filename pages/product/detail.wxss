@@ -1,0 +1,76 @@
+/* pages/product/detail.wxss */
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Helvetica-Now-Text-Bold, Helvetica,Arial, sans-serif; 
+  font-size: medium;
+}
+
+.productinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Helvetica-Now-Text-Bold, Helvetica,Arial, sans-serif; 
+  font-size: medium;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.hide-element {
+  display: none; 
+}
+
+.show-element {
+  display: none; 
+}
+
+.userinfo-stats {
+  color: #aaa;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.usermotto {
+  margin-top: 200px;
+}
+.warehouse-logo {
+  /* border: 1px solid red; */
+  width: 300px;
+  height: 300px;
+}
+
+button {
+  border: 1px solid grey
+}
+
+div {
+  display: block;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.sub-text {
+  font-size: small;
+}
+
+.select-dropdown {
+  background-color: whitesmoke;
+  border: 1px solid darkgrey;
+  padding: 10px;
+  border-radius: 5px;
+}

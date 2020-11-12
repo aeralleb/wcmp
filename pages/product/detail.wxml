@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <div style="top:0px;margin-left:20px;" wx:if="{{heroImage}}">
+      <image style="width:360px;height:460px;" src="{{heroImage}}"></image>
+      <span style="padding-left:20px;color:grey">#{{product.code}}</span>
+    </div>
+    <div style="margin-left:-20px;padding-top:10px;" wx:if="{{heroImage}}">
+      <span class="bold">{{product.name}}</span><span style="color:white">---------</span><span class="bold">{{product.price.formattedValue}}</span>
+    </div>
+    <div style="padding-top:20px;align-items:left;" wx:if="{{Tops}}">
+        <picker bindchange="changeSizes" bindcancel="cancelDropdown"  mode="selector" range="{{Tops}}" range-key="name">
+          <view class="select-dropdown">{{showSize}}</view>
+        </picker>
+    </div> 
+    <div style="margin-left:-100px;padding-top:20px;align-items:left;" wx:if="{{heroImage}}">
+      <div class="bold">Materials</div>
+      <div style="padding-top:10px;" wx:for="{{materials}}" wx:key="name">
+        <div class="sub-text">* {{item.name}}</div>
+      </div>
+    </div>
+  </view>
+</view>

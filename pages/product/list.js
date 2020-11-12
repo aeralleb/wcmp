@@ -1,24 +1,24 @@
-// pages/warehouse/lightbox.js
+// pages/product/list.js
 const wxp = require('../../utils/wxp.js');
 const util = require('../../utils/util.js')
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    emailAddress: ""
+
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    const CSWarehousePromoContent = wx.getStorageSync("CSWarehousePromoContent");
-    console.log("---------lightbox.js onLoad----------");
-    this.setData({
-      CSWarehousePromoContent : CSWarehousePromoContent
-    });
+    console.log("---------------product/list.js onLoad-----------");
+    wx.navigateTo({
+      url: './detail'
+    })
   },
 
   /**
@@ -68,16 +68,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  continueToPDP: function(){
-     console.log("---------------warehouse/lightbox.js continueToPDP with user email address : -----------------", this.emailAddress);
-     wx.navigateTo({
-      url: '../product/list'
-    })
-  },
-
-  inputEvent: function (e) {
-    console.log(e.detail.value)
-    this.emailAddress = e.detail.value;
   }
 })
