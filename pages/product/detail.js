@@ -10,13 +10,15 @@ Page({
   data: {
     heroImage: '',
     showSize: "Please select a Size",
+    code: ''
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log("---------------product/detail.js onLoad-----------");
+    this.code = wx.getStorageSync('code');
+    console.log("---------------product/detail.js onLoad code-----------", this.code);
     this.getProduct();
   },
 
@@ -71,7 +73,7 @@ Page({
 
   async getProduct(){
     //async await promise
-    const PRODUCT_URL = "https://www.levi.com/api/aos/rest/v2/leviGBSite/categories/levi_clothing_men/products?lang=en_GB&query=:relevance&fields=FULL"
+    const PRODUCT_URL = `https://www.levi.com/api/aos/rest/v2/leviUSSite/products/${this.code}?fields=FULL&lang=en_US`
     const {data} = await wxp.request({
       url: PRODUCT_URL,
       data: {},
@@ -82,26 +84,25 @@ Page({
       }
     })
     console.log("-------------getProduct using async await------------------", data);
-    const {products, ...rest} = data;
+    const {galleryImageList, ...rest} = data;
     this.setData({
-      heroImage : products[0].images[1].url,
-      product: products[0],
-      materials: rest.facets[0].values,
-      waists: rest.facets[2].values,
-      lengths: rest.facets[3].values,
-      Tops: rest.facets[4].values,
-      scanMsg: "", 
+      heroImage : galleryImageList.galleryImage[8].url,
+      product: rest,
+      materials: rest.classifications[0].features[3].featureValues.length < 2 ? rest.classifications[0].features[4].featureValues : rest.classifications[0].features[3].featureValues,
+      waists: rest.variantWaist,
+      lengths: rest.variantLength,
+      sizes: rest.variantOptions
     })
   },
   changeSizes: function(e){
     var index= e.detail.value;
     console.log("The subscript of index is:" + index);
 
-    var id=this.data.Tops[index].id;
-    var name =this.data.Tops[index].name;
+    var id=this.data.sizes[index].id;
+    var displaySizeDescription = this.data.sizes[index].displaySizeDescription;
     
     this.setData({
-      showSize:  name 
+      showSize:  displaySizeDescription 
     })
 
  },

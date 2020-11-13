@@ -1,1 +1,29 @@
 /* pages/product/list.wxss */
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Helvetica-Now-Text-Bold, Helvetica,Arial, sans-serif; 
+  font-size: medium;
+}
+.flex-grid-duo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.col {
+  display: flex; 
+
+  justify-content: left;
+  flex-direction: column;
+  margin: 20px;
+}
+.row{
+  display: flex; 
+  justify-content: left;
+  flex-direction: row;
+}
+.code{
+  text-decoration: underline;
+  cursor: pointer;
+}

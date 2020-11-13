@@ -71,6 +71,8 @@ Page({
   },
   continueToPDP: function(){
      console.log("---------------warehouse/lightbox.js continueToPDP with user email address : -----------------", this.emailAddress);
+     // Set category as warehouse
+     wx.setStorageSync("category", "levi_clothing_deals_us");
      wx.navigateTo({
       url: '../product/list'
     })

@@ -8,15 +8,15 @@
     <div style="margin-left:-20px;padding-top:10px;" wx:if="{{heroImage}}">
       <span class="bold">{{product.name}}</span><span style="color:white">---------</span><span class="bold">{{product.price.formattedValue}}</span>
     </div>
-    <div style="padding-top:20px;align-items:left;" wx:if="{{Tops}}">
-        <picker bindchange="changeSizes" bindcancel="cancelDropdown"  mode="selector" range="{{Tops}}" range-key="name">
+    <div style="padding-top:20px;align-items:left;" wx:if="{{sizes}}">
+        <picker bindchange="changeSizes" bindcancel="cancelDropdown"  mode="selector" range="{{sizes}}" range-key="displaySizeDescription">
           <view class="select-dropdown">{{showSize}}</view>
         </picker>
     </div> 
     <div style="margin-left:-100px;padding-top:20px;align-items:left;" wx:if="{{heroImage}}">
-      <div class="bold">Materials</div>
-      <div style="padding-top:10px;" wx:for="{{materials}}" wx:key="name">
-        <div class="sub-text">* {{item.name}}</div>
+      <div style="width:40%" class="bold">Materials</div>
+      <div style="width:40%" style="padding-top:10px;" wx:for="{{materials}}" wx:key="value">
+        <div class="sub-text">* {{item.value}}</div>
       </div>
     </div>
   </view>

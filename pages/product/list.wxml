@@ -1,2 +1,7 @@
 <!--pages/product/list.wxml-->
-<text>pages/product/list.wxml</text>
+<view class="container">
+  <div class="flex-grid-duo" wx:for="{{products}}" wx:key="code">
+        <div class="col"><div class="row code" bindtap="getProductDetail" data-pc9="{{item.code}}">{{item.name}}</div></div>
+  </div>
+</view>
+
