@@ -1,11 +1,11 @@
 {
   "pages":[
+    "pages/warehouse/sale",
     "pages/warehouse/lightbox",
     "pages/product/list",
     "pages/product/detail",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/warehouse/sale"
+    "pages/logs/logs"
   ],
   "permission": {
     "scope.userLocation": {
@@ -17,6 +17,23 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFE",
+    "borderStyle": "black",
+    "selectedColor": "#D03232",
+    "color": "#131313",
+    "list": [{
+      "pagePath": "pages/warehouse/sale",
+      "iconPath": "image/user-icon.png",
+      "selectedIconPath": "image/user-icon.png",
+      "text": "User"
+     }, {
+      "pagePath": "pages/product/detail",
+      "iconPath": "image/bag-icon.png",
+      "selectedIconPath": "image/bag-icon.png",
+      "text": "Bag"
+    }]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
